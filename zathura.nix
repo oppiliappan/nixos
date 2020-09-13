@@ -1,20 +1,24 @@
+let 
+  t = import ./currentTheme.nix;
+in
+  with t;
 {
   enable = true;
   options = {
     incremental-search        = "true";
     recolor                   = "true";
-    default-bg                = "#000000";
-    default-fg                = "#EEFFFF";
-    completion-bg             = "#000000";
-    completion-fg             = "#EEFFFF";
-    completion-highlight-bg   = "#ff3299";
-    completion-highlight-fg   = "#EEFFFF";
-    statusbar-bg              = "#000000";
-    statusbar-fg              = "#EEFFFF";
-    inputbar-bg               = "#000000";
-    inputbar-fg               = "#EEFFFF";
-    recolor-darkcolor         = "#EEFFFF";
-    recolor-lightcolor        = "#000000";
+    default-bg                = base00;
+    default-fg                = base05;
+    completion-bg             = base00;
+    completion-fg             = base05;
+    completion-highlight-bg   = base0E;
+    completion-highlight-fg   = base05;
+    statusbar-bg              = base00;
+    statusbar-fg              = base05;
+    inputbar-bg               = base00;
+    inputbar-fg               = base05;
+    recolor-darkcolor         = base05;
+    recolor-lightcolor        = base00;
     window-height             = "800";
     window-width              = "600";
     adjust-open               = "width";

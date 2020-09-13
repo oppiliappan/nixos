@@ -1,3 +1,7 @@
+let 
+  t = import ./currentTheme.nix;
+in
+  with t;
 {
   enable = true;
   settings = {
@@ -35,23 +39,23 @@
     };
 
     urgency_normal = {
-      background   = "#000000";
-      foreground   = "#eeffff";
+      background   = base00;
+      foreground   = base05;
       timeout      = 10;
     };
     urgency_low = {
-      background = "#000000";
-      foreground = "#eeffff";
+      background = base00;
+      foreground = base05;
       timeout    = 2;
     };
     urgency_critical = {
-      background     = "#000000";
-      foreground     = "#eeffff";
+      background     = base00;
+      foreground     = base05;
       timeout        = 0;
     };
     frame = {
       width = 2;
-      color = "#303030";
+      color = base01;
     };
     shortcuts = {
       close     = "ctrl+space";
