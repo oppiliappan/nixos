@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 
+let 
+  twobwm = import ./2bwm.nix;
+  rofi_settings = import ./rofi.nix;
+  terminal = import ./rxvt.nix;
+  xft_settings = import ./xft.nix;
+in
 {
   home.stateVersion = "20.03";
   home.packages = with pkgs; [
@@ -50,4 +56,6 @@
       videos="\$HOME/vids";
     };
   };
+
+  xresources.properties = twobwm // rofi_settings // xft_settings // terminal;
 }
