@@ -12,14 +12,11 @@
     la="ls -A";
     ll="ls -alF";
     ls="ls -F --color=always";
-    nerdz="~/scripts/nerdinfo.sh";
     o="xdg-open";
     rless="less -r";
-    spdtst="curl -o /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip";
     tmux="tmux -u";
     tree="tree -C";
     vim="nvim";
-    vime="nvim ~/.config/nvim/init.vim";
     tb="nc termbin.com 9999";
 
     # git aliases
@@ -84,6 +81,5 @@
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
     eval "$(direnv hook bash)"
     export PS1='\n$(pista)'
-    export PROMPT_COMMAND=""
     '';
 }

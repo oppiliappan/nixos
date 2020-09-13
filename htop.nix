@@ -1,6 +1,6 @@
 {
   enable = true;
-  colorScheme = 1;
+  colorScheme = 1; # monochrome
   fields = [ "PID" "USER" "PRIORITY" "M_SIZE" "M_SHARE" "STATE" "PERCENT_CPU" "PERCENT_MEM" "TIME" "COMM" ] ;
   hideThreads = true;
   highlightBaseName = true;
