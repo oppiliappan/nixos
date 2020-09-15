@@ -1,7 +1,6 @@
-let 
-  t = import ./currentTheme.nix;
-in
-  with t;
+{ theme ? import ../currentTheme.nix }:
+
+with theme;
 {
   "rofi.color-enabled" = true;
 

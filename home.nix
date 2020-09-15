@@ -1,10 +1,9 @@
 { config, pkgs, ... }:
 
 let 
-  twobwm = import ./2bwm.nix;
-  rofi_settings = import ./rofi.nix;
-  terminal = import ./rxvt.nix;
-  xft_settings = import ./xft.nix;
+  s = import ./services {};
+  p = import ./programs {};
+  x = import ./xres {};
 in
 {
   home.stateVersion = "20.03";
@@ -14,23 +13,17 @@ in
     unzip      wget
     curl       neovim
     tmux       cmus
-    weechat    compton
-    sxhkd      ripgrep
+    weechat    tree
     rofi       rxvt-unicode
     firefox    chromium
     neomutt    nix-direnv
     xclip      mpv
+    ripgrep
 
   ];
 
   programs = {
-    feh = import ./feh.nix;
-    zathura = import ./zathura.nix;
-    fzf = import ./fzf.nix;
-    git = import ./git.nix;
-    bash = import ./bash.nix;
-    htop = import ./htop.nix;
-
+    inherit (p) feh zathura fzf git bash htop;
     home-manager.enable = true;
     direnv = {
       enable = true;
@@ -39,10 +32,8 @@ in
   };
 
   services = {
+    inherit (s) dunst redshift sxhkd picom;
     lorri.enable = true;
-    dunst = import ./dunst.nix;
-    redshift = import ./redshift.nix;
-    sxhkd = import ./sxhkd.nix;
   };
 
   xdg = {
@@ -57,5 +48,7 @@ in
     };
   };
 
-  xresources.properties = twobwm // rofi_settings // xft_settings // terminal;
+  xresources = {
+    inherit (x) properties;
+  };
 }

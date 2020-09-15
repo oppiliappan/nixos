@@ -81,5 +81,6 @@
     [ -f ~/.fzf.bash ] && source ~/.fzf.bash
     eval "$(direnv hook bash)"
     export PS1='\n$(pista)'
+    export PATH=$PATH:"$HOME/scripts"
     '';
 }

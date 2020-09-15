@@ -1,9 +1,7 @@
-let 
-  t = import ./currentTheme.nix;
-in
-  with t;
-{
+{ theme ? import ../currentTheme.nix }:
 
+with theme;
+{
   "twobwm.border_width"       = 8;
   "twobwm.outer_border"       = 2;
   "twobwm.focus_color"        = base01;
