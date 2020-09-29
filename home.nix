@@ -3,22 +3,28 @@
 let 
   s = import ./services {};
   p = import ./programs {};
-  x = import ./xres {};
+  x = import ./x {};
+  nixpkgs_unstable = import /nix/var/nix/profiles/per-user/root/channels/nixos-unstable {};
 in
 {
   home.stateVersion = "20.03";
   home.packages = with pkgs; [
 
-    vim        maim
-    unzip      wget
-    curl       neovim
-    tmux       cmus
-    weechat    tree
-    rofi       rxvt-unicode
-    firefox    chromium
-    neomutt    nix-direnv
-    xclip      mpv
-    ripgrep
+    vim                  maim
+    unzip                wget
+    curl                 neovim
+    tmux                 cmus
+    weechat              tree
+    rofi                 rxvt-unicode
+    firefox              chromium
+    neomutt              nix-direnv
+    xclip                mpv
+    ripgrep              nodePackages.bash-language-server
+    ccls                 nixpkgs_unstable.gitAndTools.delta
+    miniserve            niv
+    rnix-lsp             nodejs
+    pfetch               w3m
+    nixpkgs_unstable.st  noto-fonts-emoji
 
   ];
 
@@ -47,6 +53,18 @@ in
       videos="\$HOME/vids";
     };
   };
+
+  home.file.".xinitrc".text = ''
+    #!/bin/sh
+
+    xsetroot -cursor_name left_ptr &
+    $HOME/.fehbg
+    xrdb -load $HOME/.Xresources
+    picom &
+    sxhkd &
+    urxvtd &
+    exec 2bwm
+    '';
 
   xresources = {
     inherit (x) properties;
