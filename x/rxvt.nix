@@ -24,11 +24,13 @@ with theme;
   "*color14" = base0F;
   "*color15" = base07;
 
-  "*.cursorBlink " = "on";
-  "*.font       "  = "xft:Input:size=12:style=Regular";
-
-  "*.italicFont" = "xft:Input:size=12:style=Italic";
-  "*.boldFont" = "xft:Input:size=12:style=Bold";
+  "*.cursorBlink" = "on";
+  "URxvt.font"         = "xft:Nerd Input:size=11:style=Regular";
+  "URxvt.italicFont" = "xft:Nerd Input:size=11:style=Italic";
+  "URxvt.boldFont" = "xft:Nerd Input:size=11:style=Bold";
+  "*font"         = "Nerd Input:size=11:style=Regular";
+  "*italicFont" = "Nerd Input:size=11:style=Italic";
+  "*boldFont" = "Nerd Input:size=11:style=Bold";
 
   "*.lineSpace"       = 0;
   "*.letterSpace"     = -1;
@@ -41,7 +43,10 @@ with theme;
   "*.intensityStyles" = false;
 
 
-  "*.perl-ext-common" = "default,matcher";
-  "*.url-launcher"    = "firefox";
-  "*.matcher.button"  = 1;
+  "*.perl-ext-common"    = "default,matcher,font-size";
+  "URxvt.keysym.C-Up"    = "perl:font-size:increase";
+  "URxvt.keysym.C-Down"  = "perl:font-size:decrease";
+  "URxvt.keysym.C-equal" = "perl:font-size:reset";
+  "*.url-launcher"       = "firefox";
+  "*.matcher.button"     = 1;
 }
