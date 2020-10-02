@@ -1,0 +1,7 @@
+welcome home
+------------
+
+instructions to self:
+
+    * clone to .config/nixpkgs
+    * run home-manager switch
