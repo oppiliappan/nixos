@@ -25,6 +25,7 @@ in
     rnix-lsp             nodejs
     pfetch               w3m
     nixpkgs_unstable.st  noto-fonts-emoji
+    arandr
 
   ];
 

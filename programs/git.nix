@@ -7,6 +7,11 @@
     commit.verbose = true;
     interactive.diffFilter = "delta --color-only";
   };
+  aliases = {
+    new-repo = ''
+    repo=$${1:-git/$(basename $(pwd)).git} && ssh git@ferrn git init --bare $repo && git remote add origin git@ferrn:$repo && git push -u origin HEAD; }; f
+      '';
+  };
 }
 # {
 #   enable = true;
