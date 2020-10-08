@@ -16,7 +16,7 @@ in
     tmux                 cmus
     weechat              tree
     rofi                 rxvt-unicode
-    firefox              chromium
+    firefox              
     neomutt              nix-direnv
     xclip                mpv
     ripgrep              nodePackages.bash-language-server
@@ -30,7 +30,7 @@ in
   ];
 
   programs = {
-    inherit (p) feh zathura fzf git bash htop;
+    inherit (p) feh zathura fzf git bash htop chromium;
     home-manager.enable = true;
     direnv = {
       enable = true;

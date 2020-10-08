@@ -7,4 +7,5 @@
   git = import ./git.nix;
   htop = import ./htop.nix;
   zathura = import ./zathura.nix {};
+  chromium = import ./chromium.nix;
 }

@@ -5,7 +5,7 @@ with theme;
   enable = true;
   settings = {
     global = {
-      font                 = "Input 10";
+      font                 = "Input 9";
       allow_markup         = "no";
       format               = "%s\n%b";
       sort                 = "yes";
