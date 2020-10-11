@@ -16,8 +16,7 @@ in
     tmux                 cmus
     weechat              tree
     rofi                 rxvt-unicode
-    firefox              
-    neomutt              nix-direnv
+    firefox              neomutt
     xclip                mpv
     ripgrep              nodePackages.bash-language-server
     ccls                 nixpkgs_unstable.gitAndTools.delta
@@ -25,7 +24,7 @@ in
     rnix-lsp             nodejs
     pfetch               w3m
     nixpkgs_unstable.st  noto-fonts-emoji
-    arandr
+    arandr               ripgrep-all
 
   ];
 
@@ -35,6 +34,7 @@ in
     direnv = {
       enable = true;
       enableBashIntegration = true;
+      enableNixDirenvIntegration = true;
     };
   };
 

@@ -25,22 +25,22 @@ with theme;
   "*color15" = base07;
 
   "*.cursorBlink" = "on";
-  "URxvt.font"         = "xft:Nerd Input:size=11:style=Regular";
-  "URxvt.italicFont" = "xft:Nerd Input:size=11:style=Italic";
-  "URxvt.boldFont" = "xft:Nerd Input:size=11:style=Bold";
-  "*font"         = "Nerd Input:size=11:style=Regular";
+  "URxvt.font" = "xft:scientifica:size=11:style=Medium";
+  "URxvt.italicFont" = "xft:scientifica:size=11:style=Medium";
+  "URxvt.boldFont" = "xft:scientifica:size=11:style=Medium";
+  "*font" = "Nerd Input:size=11:style=Regular";
   "*italicFont" = "Nerd Input:size=11:style=Italic";
   "*boldFont" = "Nerd Input:size=11:style=Bold";
 
-  "*.lineSpace"       = 0;
-  "*.letterSpace"     = -1;
-  "*.scrollBar"       = false;
-  "*.internalBorder"  = 25;
-  "*.cursorUnderline" = false;
-  "*.geometry"        = "70x35";
-  "*.thickness"       = 5;
-  "*.titleBar"        = false;
-  "*.intensityStyles" = false;
+  "URxvt.lineSpace"       = 0;
+  "URxvt.letterSpace"     = 0;
+  "URxvt.scrollBar"       = false;
+  "URxvt.internalBorder"  = 25;
+  "URxvt.cursorUnderline" = false;
+  "URxvt.geometry"        = "70x35";
+  "URxvt.thickness"       = 5;
+  "URxvt.titleBar"        = false;
+  "URxvt.intensityStyles" = false;
 
 
   "*.perl-ext-common"    = "default,matcher,font-size";
