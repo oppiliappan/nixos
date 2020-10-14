@@ -7,7 +7,9 @@ let
   nixpkgs_unstable = import /nix/var/nix/profiles/per-user/root/channels/nixos-unstable {};
 in
 {
-  home.stateVersion = "20.03";
+  home.stateVersion = "20.09";
+  home.username = "np";
+  home.homeDirectory = "/home/np";
   home.packages = with pkgs; [
 
     vim                  maim
@@ -25,6 +27,7 @@ in
     pfetch               w3m
     nixpkgs_unstable.st  noto-fonts-emoji
     arandr               ripgrep-all
+    imagemagick
 
   ];
 

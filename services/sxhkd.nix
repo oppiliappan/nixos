@@ -8,6 +8,6 @@ in
     "XF86AudioMute" = "amixer sset Master toggle";
     "XF86MonBrightness{Down,Up}" = "light -{U,A} 5";
     "super + Escape" = "pkill -USR1 -x sxhkd";
-    "ctrl + Escape:" = "${pkgs.nur.repos.npkgs.xcursorlocate}/bin/xcursorlocate";
+    #"ctrl + Escape:" = "${pkgs.nur.repos.npkgs.xcursorlocate}/bin/xcursorlocate";
   };
 }

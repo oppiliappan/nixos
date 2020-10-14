@@ -5,5 +5,7 @@
     "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
     "aapbdbdomjkkjkaonfhkkikfgjllcleb" # translate
     "aghfnjkcakhmadgdomlmlhhaocbkloab" # just black
+    "pobhoodpcipjmedfenaigbeloiidbflp" # minimal twitter
+    "ennpfpdlaclocpomkiablnmbppdnlhoh" # rust search extension
   ];
 }
