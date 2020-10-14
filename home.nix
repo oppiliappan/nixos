@@ -58,17 +58,27 @@ in
     };
   };
 
-  home.file.".xinitrc".text = ''
-    #!/bin/sh
-
-    xsetroot -cursor_name left_ptr &
+  xsession = {
+    enable = true;
+    windowManager.command = "2bwm";
+    initExtra = ''
     $HOME/.fehbg
-    xrdb -load $HOME/.Xresources
-    picom &
-    sxhkd &
     urxvtd &
-    exec 2bwm
-    '';
+    xrdb -load $HOME/.Xresources
+      '';
+  };
+
+  # home.file.".xinitrc".text = ''
+  #   #!/bin/sh
+
+  #   xsetroot -cursor_name left_ptr &
+  #   $HOME/.fehbg
+  #   xrdb -load $HOME/.Xresources
+  #   picom &
+  #   sxhkd &
+  #   urxvtd &
+  #   exec 2bwm
+  #   '';
 
   xresources = {
     inherit (x) properties;
